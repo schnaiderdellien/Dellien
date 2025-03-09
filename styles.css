@@ -1,0 +1,494 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(226, 226, 226);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh; 
+    overflow-x: hidden;
+}
+header{
+    scroll-padding-top: 80px;
+}
+/* Menú principal*/
+.menu{
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*background: linear-gradient(to bottom, rgb(156, 102, 101), rgba(0, 0, 0, 0));*/
+}
+
+.open__nav,
+.close__nav{
+    display: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+.logo img{
+    padding-left: 5em;
+    margin: 2em;
+    width: 13em;
+    height: auto;
+    display: flex;
+    cursor: pointer;
+
+}
+.nav__menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 50px;
+    padding-right: 3rem;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+.nav__menu ul li {
+    position: relative;
+    padding: 5px 0;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+/* Efecto de la raya al hacer hover */
+.nav__menu ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* Posición de la raya de abajo */
+    width: 0; /* desde donde empieza la raya */
+    height: 2px; /* Grosor de la raya */
+    background-color: #000; /* Color de la raya */
+    transition: width 0.3s ease; /* Animación de la raya */
+}
+
+.nav__menu ul li:hover::after {
+    width: 100%; /* La raya se llena */
+}
+
+/* Efecto de cambio de página al hacer clic */
+.nav__menuul li:active {
+    opacity: 0.7; /* Simula un cambio de página */
+    transition: opacity 0.2s ease;
+}
+
+.nav__model{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.nav__model ul{
+    width: 100%;
+    padding: 0;
+    gap: 10em;
+    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__model ul li {
+    position: relative;
+    padding: 5px 0;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+/* Efecto de la raya al hacer hover */
+.nav__model ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* Posición de la raya de abajo */
+    width: 0; /* desde donde empieza la raya */
+    height: 2px; /* Grosor de la raya */
+    background-color: #000; /* Color de la raya */
+    transition: width 0.3s ease; /* Animación de la raya */
+}
+
+.nav__model ul li:hover {
+    color: rgb(155, 155, 161);
+}
+
+.nav__model ul li:hover::after {
+    width: 100%; /* La raya se llena */
+    color: rgb(155, 155, 161);
+}
+
+/* Efecto de cambio de página al hacer clic */
+.nav__model ul li:active {
+    opacity: 0.7; /* Simula un cambio de página */
+    transition: opacity 0.2s ease;
+}
+
+.slider{
+    padding: 1rem;
+}
+.slider__container{
+    position: relative;
+    margin: 0px 110px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider__anterior,
+.slider__siguiente{
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    background: none;
+    opacity: 40%;
+    font-size: 3em;
+}
+
+.slider__anterior:hover,
+.slider__siguiente:hover{
+    opacity: 100%;
+}
+.slider__anterior{
+    left: -70px;
+}
+.slider__siguiente{
+    right: -50px;
+}
+.slider__element{
+    text-align: center;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.slider__element {
+    transition:all .8s ease;
+}
+.slider__element:hover{
+    transform: scale(.95);
+    
+}
+.slider__element:active{
+    transform: scale(1.9);
+    
+}
+.price-container{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.information-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10em;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    align-items: center;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+.information-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2.5em;
+    gap: 10em;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    align-items: center;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+.information-1 img{
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
+.information-2 img{
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.text__intormation-2{
+    padding-left: 3em;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    background-color: rgb(35, 35, 35);
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+    gap: 10em;
+
+}
+.social{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    color: aliceblue;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .open__nav,
+    .close__nav{
+        display: block;
+        margin: 30px;
+        border: none;
+        background-color: transparent;
+    }
+    .close__nav{
+        color: aliceblue;
+    }
+    .nav__menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .nav__menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgb(36, 33, 33);
+        bottom: 0;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5 );
+        z-index: 900;
+    }
+    .nav__menu.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav__list{
+        flex-direction: column;
+        align-items: end;
+        padding: 2rem;
+        color: aliceblue;
+        
+        
+    }
+    .nav__model ul li {
+        position: relative;
+        padding: 5px 0;
+    }
+    
+    /* Efecto de la raya al hacer hover */
+    .nav__model ul li::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0px; /* Posición de la raya de abajo */
+        width: 0; /* desde donde empieza la raya */
+        height: 2px; /* Grosor de la raya */
+        background-color: #000; /* Color de la raya */
+        transition: width 0.3s ease; /* Animación de la raya */
+    }
+    
+    .nav__model ul li:hover::after {
+        width: 100%; /* La raya se llena */
+    }
+    
+    /* Efecto de cambio de página al hacer clic */
+    .nav__model ul li:active {
+        opacity: 0.7; /* Simula un cambio de página */
+        transition: opacity 0.2s ease;
+    }
+}
+
+
+.photo__book {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    background:transparent;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.photo__elementGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    padding: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.photo__elementGrid img {
+    width: 100%;
+    height: auto;
+    transition:all 1.8s ease;
+}
+
+
+@media (max-width: 600px) {
+    .footer__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        background-color: rgb(35, 35, 35);
+        color: aliceblue;
+        align-items: center;
+        text-align: center;
+        gap: 3em;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav__model ul{
+        padding: 10px;
+        gap: 6em;
+        text-decoration: none;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo img{
+        padding-left: 1em;
+        margin: 2em;
+        width: 8em;
+        height: auto;
+        display: flex;
+        cursor: pointer;
+        flex-wrap: wrap;
+    
+    }
+}
+@media (max-width: 1000px) {
+    .information-1{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3em;
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        align-items: center;
+    }
+    .information-2{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3em;
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        align-items: center;
+    }
+    .text__intormation-2{
+        padding-left: 0;
+    }
+
+    .price-container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+}
+/* Lightbox */
+.lightbox{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,.8);
+    backdrop-filter: blur(.1rem);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+}
+.lightbox.isActive{
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox .close_lightbox{
+    font-size: 30px;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background:none;
+    color: aliceblue;
+    border-radius: 30%;
+    transition: all .5 ease;
+    align-self: flex-end;
+    margin: 1rem;
+
+}
+.lightbox .close_lightbox:hover{
+    transform: scale(0.95);
+}
+.lightbox .close_lightbox:active{
+    transform: scale(1.1);
+}
+.lightbox .big_lightbox{
+    width: 80%;
+    max-width: 900px;
+    height: 90vh;
+    object-fit: contain;
+}
+.lightbox .big_lightbox img {
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 3);
+}
+/* Animación scroll*/
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+.information-1, .information-2, .slider__element{
+    view-timeLine-name:--information;
+    view-timeLine-axis: block;
+
+    animation-timeline: --information;
+    animation-name: show;
+    animation-range:entry 5% cover 50%;
+    animation-fill-mode: both;
+}
