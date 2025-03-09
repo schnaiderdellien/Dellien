@@ -142,6 +142,7 @@ a{
 
 .slider{
     padding: 1rem;
+    z-index: 1400;
 }
 .slider__container{
     position: relative;
@@ -472,7 +473,7 @@ a{
 .lightbox .big_lightbox img {
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 3);
 }
-/* Animación scroll*/
+/* Animación scroll
 @keyframes show {
     from{
         opacity: 0;
@@ -491,4 +492,5 @@ a{
     animation-name: show;
     animation-range:entry 5% cover 50%;
     animation-fill-mode: both;
-}
+    
+}*/
