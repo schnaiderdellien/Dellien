@@ -66,3 +66,36 @@ closeLightbox.addEventListener("click", () => {
 lightbox.addEventListener("click", () => {
     lightbox.classList.remove("isActive");
 });
+
+/*modo oscuro ----------------------------------------------------------------------------------------------------------------------------------
+// Selecciona los botones y el body
+const modoOscuroBoton = document.querySelector(".modo-oscuro");
+const modoClaroBoton = document.querySelector(".modo-claro");
+const body = document.body;
+
+// Función para actualizar la visibilidad de los botones
+function actualizarBotones() {
+    if (body.classList.contains("modo-black-off")) {
+        modoOscuroBoton.style.display = "inline-block";
+        modoClaroBoton.style.display = "none";
+    } else {
+        modoOscuroBoton.style.display = "none";
+        modoClaroBoton.style.display = "inline-block";
+    }
+}
+
+// Función para cambiar el modo
+function toggleModoOscuro() {
+    body.classList.toggle("modo-black-off");
+    body.classList.toggle("modo-black-on");
+    actualizarBotones();
+}
+
+// Eventos de los botones
+modoOscuroBoton.addEventListener("click", toggleModoOscuro);
+modoClaroBoton.addEventListener("click", toggleModoOscuro);
+
+// **Verificar el estado del modo al cargar la página**
+document.addEventListener("DOMContentLoaded", actualizarBotones);*/
+
+

@@ -5,12 +5,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(29, 28, 28);
     align-items: center;
     box-sizing: border-box;
     width: 100%;
     min-height: 100vh; 
     overflow-x: hidden;
+    color: aliceblue;
 }
 header{
     scroll-padding-top: 80px;
@@ -22,12 +23,16 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*background: linear-gradient(to bottom, rgb(156, 102, 101), rgba(0, 0, 0, 0));*/
+}
+.modo-oscuro{
+    background: transparent;
+    border: none;
 }
 
 .open__nav,
 .close__nav{
     display: none;
+
 }
 a{
     color: inherit;
@@ -69,16 +74,20 @@ a{
     bottom: 0px; /* Posición de la raya de abajo */
     width: 0; /* desde donde empieza la raya */
     height: 2px; /* Grosor de la raya */
-    background-color: #000; /* Color de la raya */
+    background-color: hsla(0, 100%, 50%, 0.5); /* Color de la raya */
     transition: width 0.3s ease; /* Animación de la raya */
 }
 
 .nav__menu ul li:hover::after {
     width: 100%; /* La raya se llena */
+    color: rgb(221, 154, 154);
+}
+.nav__menu ul li:hover {
+    color: rgb(221, 154, 154);
 }
 
 /* Efecto de cambio de página al hacer clic */
-.nav__menuul li:active {
+.nav__menu ul li:active {
     opacity: 0.7; /* Simula un cambio de página */
     transition: opacity 0.2s ease;
 }
@@ -121,17 +130,17 @@ a{
     bottom: 0px; /* Posición de la raya de abajo */
     width: 0; /* desde donde empieza la raya */
     height: 2px; /* Grosor de la raya */
-    background-color: #000; /* Color de la raya */
+    background-color: hsla(0, 100%, 50%, 0.5); /* Color de la raya */
     transition: width 0.3s ease; /* Animación de la raya */
 }
 
 .nav__model ul li:hover {
-    color: rgb(155, 155, 161);
+    color: rgb(221, 154, 154);
 }
 
 .nav__model ul li:hover::after {
     width: 100%; /* La raya se llena */
-    color: rgb(155, 155, 161);
+    color: rgb(221, 154, 154);
 }
 
 /* Efecto de cambio de página al hacer clic */
@@ -147,7 +156,7 @@ a{
 .slider__container{
     position: relative;
     margin: 0px 110px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px hsla(0, 100%, 50%, 0.3);
 }
 
 .slider__anterior,
@@ -163,6 +172,7 @@ a{
     background: none;
     opacity: 40%;
     font-size: 3em;
+    color: aliceblue;
 }
 
 .slider__anterior:hover,
@@ -227,7 +237,7 @@ a{
     height: auto;
     padding: 2em;
     align-items: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px hsla(0, 100%, 50%, 0.3);
     
 }
 .information-2 img{
@@ -235,7 +245,7 @@ a{
     height: auto;
     padding: 2em;
     align-items: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px hsla(0, 100%, 50%, 0.3);
 }
 .text__intormation-2{
     padding-left: 3em;
@@ -272,6 +282,7 @@ a{
         margin: 30px;
         border: none;
         background-color: transparent;
+        color: rgb(155, 155, 161);
     }
     .close__nav{
         color: aliceblue;
@@ -338,6 +349,7 @@ a{
     background:transparent;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
+    
 }
 
 .photo__elementGrid {
@@ -348,6 +360,7 @@ a{
     padding: 0px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    box-shadow: 5px 5px 10px hsla(0, 100%, 50%, 0.3);
 }
 
 .photo__elementGrid img {
@@ -469,10 +482,13 @@ a{
     max-width: 900px;
     height: 90vh;
     object-fit: contain;
+
 }
 .lightbox .big_lightbox img {
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 3);
+    box-shadow: 5px 5px 10px hsla(0, 100%, 50%, 0.3);
 }
+
+
 /* Animación scroll
 @keyframes show {
     from{
