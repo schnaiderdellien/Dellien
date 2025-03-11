@@ -260,6 +260,9 @@ a{
     align-items: center;
     text-align: center;
     gap: 10em;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    justify-content:flex-end;
 
 }
 .social{
@@ -488,6 +491,34 @@ a{
     box-shadow: 5px 5px 10px hsla(0, 100%, 50%, 0.3);
 }
 
+.container__contact{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+
+}
+.contact-pag{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    padding-bottom: 28rem;
+    
+}
+.text__contact{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+    justify-content: flex-end;
+}
+.text__contact ul{
+    list-style: none;
+    text-decoration: none;
+}
 
 /* Animación scroll
 @keyframes show {
